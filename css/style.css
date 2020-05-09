@@ -1,0 +1,20 @@
+body {
+    margin: 0 auto;
+    width: 80%;
+    background: black;
+    color: white;
+}
+
+.special {
+    background: white;
+    padding-top: 1em;
+}
+
+img {
+    height: 200px;
+    margin: 5px;
+}
+
+.main {
+    background: gray;
+}
