@@ -22,11 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $db->query($sql);
 
     if (!$result) {
-        echo "<div>There was a problem registering your account</div>";
+        echo '<div class="reg_div">There was a problem registering your account</div>';
     } else {
         folder_checker($username);
-        echo "<div>You are now ready to go!</div>";
-        echo '<a href="login.php" title="Login Page">Login</a>';
+        echo '<div class="reg_div">You are now ready to go!';
+        echo '<a href="login.php" title="Login Page">Login</a></div>';
     }
 }
 ?>
