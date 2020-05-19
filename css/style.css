@@ -18,3 +18,72 @@ img {
 .main {
     background: gray;
 }
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.special1 {
+    margin: 0 auto;
+}
+
+#showPassword {
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(31, 221, 255);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: .2em;
+    width: 75%;
+    margin: 0 auto;
+}
+  
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 22px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+li a:hover {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+
+}
+
+#alert {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    width: 75%;
+    padding: 10px;
+    margin: 20px auto 5px auto;
+}
+
+.register, .login {
+    margin-bottom: 100px;
+}
+
+
+

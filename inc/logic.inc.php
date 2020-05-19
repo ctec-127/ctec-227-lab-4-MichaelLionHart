@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    $username = $_SESSION['username'];
     // Define these errors in an array
     $upload_errors = array(
         UPLOAD_ERR_OK                 => "No errors.",
@@ -17,7 +19,7 @@
         // setting target file name
         $target_file = basename($_FILES['file_upload']['name']);
         // setting upload folder name
-        $uploads = 'uploads';    
+        $uploads = "uploads/" . $_SESSION['username'];    
         
         if (move_uploaded_file($tmp_file, $uploads . "/" . $target_file)) {
             $message = "Image uploaded successfully";
@@ -28,31 +30,15 @@
     }
 
     if (isset($_GET['file'])){
-        copy('uploads/' . $_GET['file'],'backup/'.$_GET['file']);
+        copy("uploads/" . $_SESSION['username'] . "/" . $_GET['file'],'backup/'.$_GET['file']);
         // insert code from tuesday to move the file somewhere else instead of deleting
-        if(unlink("uploads/" . $_GET['file'])){
+        if(unlink("uploads/" . $_SESSION['username'] . "/" . $_GET['file'])){
             header('Location: image-gallery.php');
         } else {
             echo '<p>Sorry, I could not delete the file you selected.</p>';
         }
     }
 
-    function display_images() {
-        // starting at current directory
-        $dir = "uploads";
-        if (is_dir($dir)) {
-            if ($dir_handle = opendir($dir)) {
-                while ($filename = readdir($dir_handle)) {
-                    if (!is_dir($filename) && $filename != '.DS_Store') {
-                        $filename = urlencode($filename);
-                        echo "<div><img src=\"uploads/$filename\" alt=\"A photo\"><a class=\"btn text-info\" href=\"?file=$filename\">Delete picture</a></div>";
-                    }
-                } // end while
-                // close directory now that we no longer need it
-                closedir($dir_handle);
-            } // end if
-        } // end if
-    }
-
+    
     
 ?>
