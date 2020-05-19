@@ -9,7 +9,7 @@ $pageTitle = 'Home';
 require_once 'inc/header.inc.php';
 require_once 'inc/nav.inc.php';
 ?>
-
+<!-- display welcome message -->
 <h1>Hello <?= isset($_SESSION['first_name']) ? $_SESSION['first_name'] : 'New User!' ?></h1>
 <h2>Register or login to create your own image gallery!</h2>
 <div id="message"></div>

@@ -1,23 +1,30 @@
 <?php
 require_once 'inc/functions.inc.php';
+// set page title
 $pageTitle = 'Login';
+// load header
 require 'inc/header.inc.php';
+// load nav
 require 'inc/nav.inc.php';
 // start session
 session_start();
-// login.php
-
+// connect to database
 require_once 'inc/db_connect.inc.php';
 
+// if login button was pressed
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+    // set db data to variables
     $username = $db->real_escape_string($_POST['username']);
     $password = hash('sha512', $db->real_escape_string($_POST['password']));
 
+    // build sql query
     $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
-    //  echo $sql;
-  	
+      
+    // query database with built sql
     $result = $db->query($sql);
+
+    // if successfully returns one row of data, create session variables, fetch row information and direct browswer to image-gallery.php
     if ($result->num_rows == 1) {
 
         $_SESSION['loggedin'] = 1;
@@ -27,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['username'] = $row['username'];
 
         header('location: image-gallery.php');
+    // otherwise, display error message
     } else {
         echo '<p>Please try again</p>';
     }
@@ -34,13 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ?>
 
-<!-- example - if user logged in, show image upload form -->
-<?php
-    // if(isset($_SESSION['username'])) {
-    //     include 'upload_form.php';
-    // }
-?>
 <h1>Login</h1>
+<!-- form -->
 <form class="col-lg-3 mx-auto login" action="login.php" method="POST">
     <br>
     <label for="username">Username</label>
@@ -54,7 +57,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <br>
     <input class="btn btn-primary" type="submit" value="Login">
 </form>
+<!-- end of form -->
 
+<!-- load javascript -->
 <script src="js/script.js"></script>
 
+<!-- load footer -->
 <?php require 'inc/footer.inc.php'; ?>

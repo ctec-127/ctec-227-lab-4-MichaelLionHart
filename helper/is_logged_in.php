@@ -1,12 +1,13 @@
 <?php
 // is_logged_in.php
 
-// starts a session
+// start a session
 session_start();
-// checks if first_name is living
+// check if first_name is set
 if (isset($_SESSION['first_name'])) {
-    // if so, returns a JavaScript object {status: "yes"}
+    // if so, return a JavaScript object {status: "yes"}
     echo json_encode(["status" => 'yes']);
 } else {
+    // otherwise, return a JavaScript object {status: "no"}
     echo json_encode(["status" => 'no']);
 }
