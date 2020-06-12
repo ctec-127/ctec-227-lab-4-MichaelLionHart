@@ -41,18 +41,18 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `username`, `email`, `first_name`, `last_name`, `password`) VALUES
-(1, 'userOne', 'belgort@clark.edu', 'Bruce', 'Elgort', 'secret'),
-(5, 'userFive', 'bruce.elgort@gmail.com', 'sdfsaf', 'safsfsaf', 'sadfsdf'),
-(7, 'userSeven', 'beau@martin.com', 'sdaff', 'sdfsda', 'sdafs'),
-(10, 'userTen', 'ahagha@gaga.com', 'sdfsdaf', 'sfdsdf', 'sdfsafsadf'),
-(15, 'userFifteen', 'lady@gaga.com', 'sdafsadf', 'sddfadff', 'sdafsadf'),
-(17, 'userSeventeen', 'iosif@frenchfries.org', 'sadfasf', 'sadfsdf', 'sdfdsafsa'),
-(20, 'userTwenty', 'june@pain.com', 'June', 'Pain', 'sha512(password)'),
-(21, 'userTwentyOne', 'b@b.com', 'sdfsadf', 'sadfsdf', ''),
-(24, 'userTwentyFour', 'scott@scott.com', 'scott', 'scott', 'b119701f3d3eaa97d998a4e8021307785e7f107f26d4f9f72f1cc58591a712ea84e1c2349335412e307c518d572526b2f92c7a8d20d0cd108ee97654e3455d5b'),
-(35, 'userThirtyFive', 'A@A.COM', 'Cat', 'Stevens', '4241b986a49591d445ebb840bc4b49c12b10b392b49222bc45dfd8b871cb3d0e742cdba152aa782e253026c7fc93fe8287b95c5fd0e22467e99c89501a502cd4'),
-(51, 'userFiftyOne', 'joani@joani.com', 'Joani', 'Jendgleski', '4241b986a49591d445ebb840bc4b49c12b10b392b49222bc45dfd8b871cb3d0e742cdba152aa782e253026c7fc93fe8287b95c5fd0e22467e99c89501a502cd4');
+-- INSERT INTO `user` (`user_id`, `username`, `email`, `first_name`, `last_name`, `password`) VALUES
+-- (1, 'userOne', 'belgort@clark.edu', 'Bruce', 'Elgort', 'secret'),
+-- (5, 'userFive', 'bruce.elgort@gmail.com', 'sdfsaf', 'safsfsaf', 'sadfsdf'),
+-- (7, 'userSeven', 'beau@martin.com', 'sdaff', 'sdfsda', 'sdafs'),
+-- (10, 'userTen', 'ahagha@gaga.com', 'sdfsdaf', 'sfdsdf', 'sdfsafsadf'),
+-- (15, 'userFifteen', 'lady@gaga.com', 'sdafsadf', 'sddfadff', 'sdafsadf'),
+-- (17, 'userSeventeen', 'iosif@frenchfries.org', 'sadfasf', 'sadfsdf', 'sdfdsafsa'),
+-- (20, 'userTwenty', 'june@pain.com', 'June', 'Pain', 'sha512(password)'),
+-- (21, 'userTwentyOne', 'b@b.com', 'sdfsadf', 'sadfsdf', ''),
+-- (24, 'userTwentyFour', 'scott@scott.com', 'scott', 'scott', 'b119701f3d3eaa97d998a4e8021307785e7f107f26d4f9f72f1cc58591a712ea84e1c2349335412e307c518d572526b2f92c7a8d20d0cd108ee97654e3455d5b'),
+-- (35, 'userThirtyFive', 'A@A.COM', 'Cat', 'Stevens', '4241b986a49591d445ebb840bc4b49c12b10b392b49222bc45dfd8b871cb3d0e742cdba152aa782e253026c7fc93fe8287b95c5fd0e22467e99c89501a502cd4'),
+-- (51, 'userFiftyOne', 'joani@joani.com', 'Joani', 'Jendgleski', '4241b986a49591d445ebb840bc4b49c12b10b392b49222bc45dfd8b871cb3d0e742cdba152aa782e253026c7fc93fe8287b95c5fd0e22467e99c89501a502cd4');
 
 --
 -- Indexes for dumped tables
